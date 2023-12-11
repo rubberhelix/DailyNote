@@ -1,4 +1,4 @@
-Many people benefit for a practice of taking notes. Notes may be of short term relevance
+Many people benefit from a practice of taking notes. Notes may be of short term relevance
 or may be important to commit to long term memory such as advice, wisdom or influential
 experiences that you learned from. This "applet" simply reads from a list of notes that
 you create in CSV format and shows you a new one everyday. It is designed with the intent
@@ -16,4 +16,4 @@ Possible future upgrades--
     Randomize the note number selected
     Allow for more than 365 notes
     Change the file reading process so that it doesnt have to read the entire notes.csv
-        into memory before selection the row to display.
+        into memory before selecting the row to display.
