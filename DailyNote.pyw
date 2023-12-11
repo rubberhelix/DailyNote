@@ -11,15 +11,15 @@ class DailyNote(ctk.CTk):
 
         # configure the window
         self.title("Daily Note")
-        self.minsize(400,150)
-        self.resizable(False, True)
+        self.resizable(False, False)
+        self.minsize(200, 125)
         ctk.set_appearance_mode("System")
-        self.grid_rowconfigure(1, weight=1)
+        self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
         # the daily note
         self.note = ctk.CTkLabel(self, text="", wraplength=350)
-        self.note.grid(row=0, pady=(20,0), sticky='ew')
+        self.note.grid(row=0, padx=25, pady=(20,0), sticky='ew')
         
         # 'close' button
         self.login_button = ctk.CTkButton(self, height=30, text="Close", command=self.destroy)
@@ -43,7 +43,6 @@ class DailyNote(ctk.CTk):
         jdate = sdtdate.tm_yday
         note = data[jdate%len(data)]
         self.note.configure(text=note)
-
 
 if __name__=="__main__":
     app = DailyNote()
