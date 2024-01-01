@@ -33,7 +33,7 @@ class DailyNote(ctk.CTk):
 
         with open('notes.csv', 'r') as file:
             reader = csv.reader(file)
-            data = []
+            self.data = []
             for row in reader:
                 data.extend(row)
         fmt = '%Y-%m-%d'
@@ -41,7 +41,7 @@ class DailyNote(ctk.CTk):
         sdtdate = datetime.datetime.strptime(today, fmt)
         sdtdate = sdtdate.timetuple()
         jdate = sdtdate.tm_yday
-        note = data[jdate%len(data)]
+        note = self.data[jdate%len(self.data)]
         self.note.configure(text=note)
 
 if __name__=="__main__":
